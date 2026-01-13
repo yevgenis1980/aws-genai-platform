@@ -2,30 +2,31 @@
 
 
 
-## AWS | GenAI Platform 
+## AWS | GenAI Chatbot
 Architecture with public and private subnets, an Application Load Balancer (ALB), EC2 instances, and private resources. It demonstrates how users interact with the system, and how scaling and secure resource access are managed.
 
 
 
-🎯 GenAI Chatbot | Architecture Overview
+🎯 Architecture Overview
 ```
-✅ Deployment & Infrastructure Layer
-Code repositories, CI/CD pipelines, AWS CDK, S3/CloudFront, Cognito, API Gateway/AppSync, vector databases, and Bedrock endpoints.
-✅ Chatbot Runtime:
-User queries go through API Gateway → Lambda preprocessing → RAG retrieval → LLM query → post-processing → response to the user.
-✅ Monitoring & Feedback:
-CloudWatch metrics, EventBridge alerts, analytics, automated updates, and optional API triggers.
-This modular architecture allows developers to customize models, data sources, and user workflows while maintaining enterprise-grade security and reliability.
+✅ Deployment & Infrastructure Layer : Code repositories, CI/CD pipelines, AWS CDK, S3/CloudFront, Cognito, API Gateway/AppSync, vector databases, and Bedrock endpoints.
+✅ Chatbot Runtime: User queries go through API Gateway → Lambda preprocessing → RAG retrieval → LLM query → post-processing → response to the user.
+✅ Monitoring & Feedback: CloudWatch metrics, EventBridge alerts, analytics, automated updates, and optional API triggers.
 ```
 
 
 🧱 Features
 ```
-✔ Fully automated provisioning with Terraform
-✔ High availability using multiple subnets in different Availability Zones
-✔ Secure connectivity between Application and RDS
-✔ Configurable environment variables for database credentials
-✔ Easy to extend for other JSON data source
+✔ Multi-Model Support
+AWS GenAI Chatbot can query multiple LLMs at once. This allows you to compare responses from different models and select the best one for your application.
+✔ RAG Workspaces
+Users can upload documents, PDFs, or structured data into workspaces. The chatbot indexes this content and retrieves relevant information dynamically during conversations.
+✔ Multimodal Capabilities
+Beyond text, the chatbot can interact with multimodal content such as images, leveraging models hosted on SageMaker or Bedrock for richer responses.
+✔ Security and Access Control
+Integration with Amazon Cognito enables authentication, role-based access control, and secure access to sensitive information.
+✔ Scalability & Monitoring
+AWS services such as CloudWatch and EventBridge allow monitoring, logging, and alerting, ensuring your chatbot scales efficiently and operates reliably.
 ```
 
 
