@@ -9,9 +9,17 @@ Architecture with public and private subnets, an Application Load Balancer (ALB)
 
 🎯 Architecture Overview
 ```
-✅ Deployment & Infrastructure Layer : Code repositories, CI/CD pipelines, AWS CDK, S3/CloudFront, Cognito, API Gateway/AppSync, vector databases, and Bedrock endpoints.
-✅ Chatbot Runtime: User queries go through API Gateway → Lambda preprocessing → RAG retrieval → LLM query → post-processing → response to the user.
-✅ Monitoring & Feedback: CloudWatch metrics, EventBridge alerts, analytics, automated updates, and optional API triggers.
+✅ VPC + Subnets + NAT
+✅ Lambda backend + RAG pipeline + Embeddings
+✅ Bedrock integration (Claude, Titan, etc.)
+✅ DynamoDB chat history
+✅ OpenSearch vector search
+✅ AppSync GraphQL API
+✅ Cognito authentication
+✅ S3 + CloudFront frontend
+✅ Observability with CloudWatch and X-Ray
+✅ CI/CD GitHub Actions
+✅ Cost and security controls
 ```
 
 
