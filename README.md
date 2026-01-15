@@ -8,36 +8,28 @@ AWS GenAI LLM Chatbot is an open‑source, enterprise‑ready generative AI chat
 
 🎯 Architecture Overview
 ```
-✅ VPC + Subnets + NAT
-✅ Lambda backend + RAG pipeline + Embeddings
-✅ Bedrock integration (Claude, Titan, etc.)
-✅ DynamoDB chat history
-✅ OpenSearch vector search
-✅ AppSync GraphQL API
-✅ Cognito authentication
-✅ S3 + CloudFront frontend
-✅ Observability with CloudWatch and X-Ray
-✅ CI/CD GitHub Actions
-✅ Cost and security controls
+✅Virtual Private Cloud (VPC) with subnets and NAT
+✅Lambda functions for backend processing
+✅RAG pipeline with embeddings + search
+✅Bedrock integration to run LLMs like Claude or Titan
+✅DynamoDB for storing conversation history
+✅OpenSearch vector search for retrieval
+✅AWS AppSync for GraphQL APIs
+✅Cognito for auth
+✅S3 + CloudFront for serving the React UI
+✅CI/CD automation (GitHub Actions)
 ```
 
 
-🚀 Key Features
+🎯 Capabilities
 ```
-🔹 Multi‑LLM Support
-You can run many different models — including Amazon Bedrock models (like Claude and Llama 2), SageMaker hosted models, and even external provider models (OpenAI, Anthropic, Cohere, etc.) — all from a single chatbot framework.
-🔹 RAG Workspaces & Document Indexing
-Upload files or text into “workspaces” and the system will index them so the chatbot can pull in relevant context during conversations. You choose the embeddings model and chunking setup.
-🔹 Multimodal Support
-You can experiment with multimodal models (e.g., those that understand image content) via Amazon SageMaker deployments.
-🔹 Full Web UI Included
-A React‑based web interface is part of the solution, served from Amazon S3 & CloudFront, so end users can interact with the chatbot in a browser.
-🔹 Role‑Based Access Control
-Use Amazon Cognito to manage user authentication and roles, letting you restrict which chatbots or data different users can access.
-🔹 Multi‑Model Comparison
-The system supports sending the same query to multiple models at once so you can compare how each responds in the same context
+Multi‑LLM support – interface to different language models
+RAG workspaces/document indexing – upload and index data for contextual query answering
+Multimodal – hints at SageMaker‑based models that can support images (likely via config)
+Role‑based access control (Cognito)
+Multi‑model comparison during chat
+Terraform based deployment steps
 ```
-
 
 
 🚀 Deployment Options
