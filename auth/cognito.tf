@@ -40,3 +40,23 @@ provider_name = aws_cognito_user_pool.this.endpoint
 server_side_token_check = false
  }
 }
+
+resource "aws_iam_role" "authenticated" {
+name = "${var.project_name}-authenticated"
+
+
+assume_role_policy = jsonencode({
+Version = "2012-10-17"
+Statement = [{
+Effect = "Allow"
+Principal = {
+Federated = "cognito-identity.amazonaws.com"
+}
+Action = "sts:AssumeRoleWithWebIdentity"
+Condition = {
+StringEquals = {
+"cognito-identity.amazonaws.com:aud" = aws_cognito_identity_pool.this.id
+}
+}
+}]
+})
